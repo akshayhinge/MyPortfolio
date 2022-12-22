@@ -122,6 +122,11 @@
   bottom: 33.6%;
   left: 12.6%;
 }
+
+#about .row .image img:hover{
+  box-shadow: 0px 17px 20px 0px rgb(12 12 12);
+    transform: translate(0,-5px);
+}
 #education .container{
   box-shadow: 0px 17px 20px 0px rgb(12 12 12);
 }
@@ -206,6 +211,7 @@
   #skills .skills-content .content .card:hover{
     box-shadow: 0px 17px 20px 0px rgb(12 12 12);
     transform: translate(0,-5px);
+    cursor: pointer;
   }
   #skills .skills-content .content .card{
     margin: 1rem 1rem;
@@ -285,12 +291,17 @@
 
 .typing h2 {
     position: relative;
-    color: #4FC3F7;
+    color: #0084ff;
     letter-spacing: 5px;
     font-size: 4rem;
     overflow: hidden;
     margin-bottom: 0;
     animation: type 5s steps(11) infinite;
+    /* background: */
+    /* linear-gradient(to right, #212529, #ffffff), */
+    /* linear-gradient(to right, rgb(22, 22, 22), #0084ff, rgba(0, 100, 200, 1)); */
+
+  transition: .5s;
 }
 
 @keyframes type {
@@ -414,68 +425,58 @@
   transform: .5s;
   border-radius: 6px;
 }
-.hover-3::after {
-  content: '';
-  width: calc(100% - 3rem);
-  height: calc(100% - 3rem);
-  border: 1px solid #fff;
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  z-index: 90;
-  transition: all 0.3s;
-  transform: scale(1.1);
-  opacity: 0;
-  display: block;
-  opacity: 0;
+@media(max-width :768px){
+ 
+  #projects .other-projects .card-wrapper {
+    padding: 5% 5%;
+  }
+  #projects .other-projects .card-wrapper .card{
+    height: 11rem;
+    margin-bottom: 2rem;
+    font-size: .5rem;
+  }
+  #projects .other-projects .card-wrapper .card button{
+    font-size: .5rem;
+  }
 }
+@media(max-width :360px){
+  #home .carousel button {
+    width: 15px;
 
-.hover-3-content {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  transform: translateY(-50%);
-  text-align: center;
-  z-index: 99;
+  }
+  #home .carousel-indicators {
+    margin-bottom: 0;
+  }
+  #projects .other-projects .card-wrapper .card .center{
+    font-size: .3rem;
+    padding: 0px;
+  }
+  #projects .other-projects .card-wrapper .card{
+    height: 8rem;
+    margin-bottom: 1rem;
+  }
+  #projects .other-projects .card-wrapper .card button{
+    font-size: .3rem;
+  }
 }
-
-.hover-3-description {
-  opacity: 0;
-  transform: scale(1.3);
-  transition: all 0.3s;
+#contact .container-fluid{
+  background-color: thistle;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
-
-.hover-3 img {
-  width: 110%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#contact .container-fluid .content ul{
+  list-style: none;
 }
-
-.hover-3 .hover-overlay {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.hover-3:hover img {
-  width: 100%;
-}
-
-.hover-3:hover::after {
-  opacity: 1;
-  transform: none;
-}
-
-.hover-3:hover .hover-3-description {
-  opacity: 1;
-  transform: none;
-}
-
-.hover-3:hover .hover-overlay {
-  background: rgba(0, 0, 0, 0.8);
-}
-.ball {
-  position: absolute;
-  border-radius: 100%;
-  opacity: 0.7;
+#contact .container-fluid .content li{
+  margin: 0px 5px;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
