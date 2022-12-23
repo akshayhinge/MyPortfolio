@@ -480,3 +480,8 @@
     align-items: center;
     justify-content: center;
 }
+#contact .container-fluid .content li a:hover i{
+  /* transition: .5s; */
+  /* opacity: .5; */
+  transform: scale(1.2);
+}
