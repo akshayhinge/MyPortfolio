@@ -123,9 +123,13 @@
   left: 12.6%;
 }
 
+#about .row .image img{
+  box-shadow: 0px 0px 7px 0px rgb(12 12 12 / 82%);
+   
+}
 #about .row .image img:hover{
-  box-shadow: 0px 17px 20px 0px rgb(12 12 12);
-    transform: translate(0,-5px);
+  box-shadow: 0px 5px 16px 0px rgb(12 12 12 / 82%);
+  transform: translate(0,-5px);
 }
 #education .container{
   box-shadow: 0px 17px 20px 0px rgb(12 12 12);
@@ -438,10 +442,16 @@
   #projects .other-projects .card-wrapper .card button{
     font-size: .5rem;
   }
+  #home .carousel-indicators{
+    margin-bottom: 0;
+  }
+  #home .carousel button{
+    width: 20px;
+  }
 }
 @media(max-width :360px){
   #home .carousel button {
-    width: 15px;
+    width: 10px;
 
   }
   #home .carousel-indicators {
@@ -458,6 +468,14 @@
   #projects .other-projects .card-wrapper .card button{
     font-size: .3rem;
   }
+  #contact .container-fluid .content li .bi::before{
+    vertical-align: 0em !important;
+    font-size: 1rem;
+  }
+  #contact .container-fluid .content li .bi{
+    width: 2rem !important;
+    height: 2rem !important;
+  }
 }
 #contact .container-fluid{
   background-color: thistle;
@@ -467,21 +485,45 @@
     align-items: center;
     padding: 1rem;
 }
-#contact .container-fluid .content ul{
-  list-style: none;
-}
+
 #contact .container-fluid .content li{
   margin: 0px 5px;
-  border: 1px solid black;
-  border-radius: 50%;
-  width: 3rem;
-    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#contact .container-fluid .content li a:hover i{
-  /* transition: .5s; */
-  /* opacity: .5; */
-  transform: scale(1.2);
+
+#contact .container-fluid .content li .bi::before{
+  vertical-align: -0.30em;
+}
+#contact .container-fluid .content li .front {
+  will-change: transform;
+  transition: transform 300ms;
+}
+
+#contact .container-fluid .content li .pushable:hover .front {
+  transform: translateY(-6px);
+}
+
+#contact .container-fluid .content li .pushable:active .front {
+  transform: translateY(-2px);
+}
+#contact .container-fluid .content li .pushable {
+  background: hsl(340deg 100% 32%);
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  text-align: center;
+}
+#contact .container-fluid .content li .front {
+  display: block;
+  /* padding: 12px 42px; */
+  border-radius: 50%;
+  font-size: 1.25rem;
+  background: hsl(345deg 100% 47%);
+  color: white;
+  transform: translateY(-4px);
+  width: 3rem;
+  height: 3rem;
 }
